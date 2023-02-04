@@ -11,6 +11,23 @@ function setupMenu() {
             return articleToCardTransition
         })
     });
+    $(".js-home").on("click", function () {
+        /// This animates back the menu icon
+        $(".menuIcon").removeClass("js-menuOpen");
+
+        /// This removes the menu
+        $(".global-nav").removeClass("js-open");
+
+        /// Scrolls to contact
+        $.fn.fullpage.moveTo("home");
+
+        /// I don't really know if this is required
+        // Barba.Pjax.getTransition = function () {
+
+        //     return PageTransitionTop
+        // }
+    });
+
     /// Configuring the contact button in the menu to properly animate everything
     $(".js-contact").on("click", function () {
         /// This animates back the menu icon
