@@ -3,7 +3,7 @@ function setupScrollingAndScrollAnimations() {
     $("#js-fullpage").fullpage({
         easingcss3: "cubic-bezier(0.645, 0.045, 0.355, 1)",
         scrollingSpeed: 1e3,
-        anchors: ["home", "reile", "about", "lifeblood", "contact"],
+        anchors: ["home", "I", "II", "III", "contact"],
         navigation: true,
         navigationPosition: "left",
         animateAnchor: false,
