@@ -21,6 +21,7 @@
   <meta property="og:url" content="lifeblood.tanzilzubair.tech">
   <meta property="og:title" content="Lifeblood">
   <title>Lifeblood</title>
+  <link rel="preload" href="./assets/models/intro.splinecode" as="fetch">
 </head>
 
 <body>
@@ -56,44 +57,26 @@
               <p class="title__lead js-letter">web designer /<br>markup engineer.</p>
             </div>
             <div class="moon">
-              <div class="moon__img js-parallax-moon">
-                <div class="moon__front layer" data-depth="0.2">
-                  <div class="moon__text-wrap">
-                    <p class="moon__text js-moon" data-depth="0.5">PORTFOLIO</p>
-                  </div>
-                </div>
-                <div class="moon__front layer" data-depth="0.8">
-                  <div class="cloud cloud--front1 js-moon"><img src="./assets/img/cloud1.svg" alt="cloud"></div>
-                </div>
-                <div class="moon__back layer" data-depth="0.4">
-                  <div class="cloud cloud--back2 js-moon"><img src="./assets/img/b_cloud02.svg" alt="cloud"></div>
-                </div>
-                <div class="moon__front layer" data-depth="0.6">
-                  <div class="cloud cloud--front2 js-moon"><img src="./assets/img/cloud2.svg" alt="cloud"></div>
-                </div>
-                <div class="moon__back layer" data-depth="0.5"><img class="js-moon" src="./assets/img/moon.svg"
-                    alt="moon"></div>
-                <div class="moon__front layer" data-depth="0.7">
-                  <div class="cloud cloud--front3 js-moon"><img src="./assets/img/cloud3.svg" alt="cloud"></div>
-                </div>
-                <div class="moon__back layer" data-depth="0.3">
-                  <div class="cloud cloud--back1 js-moon"><img src="./assets/img/b_cloud01.svg" alt="cloud"></div>
-                </div>
-              </div>
+              <canvas id="canvas3d">
+
+              </canvas>
             </div>
+
           </div>
         </div>
         <div class="section">
           <div class="fullpage__slide">
             <div class="title">
               <h2 class="title__text js-letter">The Information<br>Super-Highway</h2>
-              <div class="border js-letter"><span></span><span class="js-letter"></span></div>
-              <p class="title__lead js-letter">website</p>
-              <div class="btn-wrap js-letter"><a class="btn" href="./I.html">Explore</a></div>
+              <div class="border js-letter"><span style="background:#F20089"></span><span class="js-letter"
+                  style="background:#F20089"></span></div>
+              <p class="title__lead js-letter">The internet endures</p>
+              <div class="btn-wrap js-letter"><a class="btn" style="background:#F20089" href="./I.html">Explore</a>
+              </div>
             </div><a class="image image--works" href="./I.html">
               <div class="image__over">
-                <div class="image__cover"></div>
-                <div class="image__cover"></div>
+                <div class="image__cover" style="background:#5B0034"></div>
+                <div class="image__cover" style="background:#000000"></div>
               </div>
               <div class="page-num">
                 <p>01</p>
@@ -105,13 +88,14 @@
           <div class="fullpage__slide">
             <div class="title">
               <h2 class="title__text js-letter">A Ghost<br>In The Shell</h2>
-              <div class="border js-letter"><span></span><span class="js-letter"></span></div>
+              <div class="border js-letter"><span style="background:#EC431C"></span><span class="js-letter"
+                  style="background:#EC431C"></span></div>
               <p class="title__lead js-letter">Of Metal And Flesh /<br>/ Silicon And Bone</p>
-              <div class="btn-wrap js-letter"><a class="btn" href="./II.html">Dive</a></div>
+              <div class="btn-wrap js-letter"><a class="btn" style="background:#EC431C" href="./II.html">Dive</a></div>
             </div><a class="image image--about" href="./II.html">
               <div class="image__over">
-                <div class="image__cover"></div>
-                <div class="image__cover"></div>
+                <div class="image__cover" style="background:#EC431C"></div>
+                <div class="image__cover" style="background:#5E6772"></div>
               </div>
               <div class="page-num">
                 <p>02</p>
@@ -164,19 +148,7 @@
         </div>
       </div>
       <p class="scrollDown">SCROLLDOWN</p>
-      <div class="moon-background">
-        <div class="moonlight">
-          <div class="moonlight__wrap js-parallax-moonlight">
-            <div class="layer moonlight__img" data-depth="0.2"></div>
-          </div>
-        </div>
-      </div>
-      <div class="star js-parallax-star">
-        <div class="layer" data-depth="0.1">
-          <div class="star__img"><img src="./assets/img/star.svg"></div>
-        </div>
-      </div>
-      <div class="sky-color"></div>
+      <div class="sky-color" id="sky-color"></div>
     </div>
   </main>
   <script src="./assets/js/full_page_scrolling.js"></script>
@@ -184,7 +156,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./assets/js/jquery.fullPage.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-  <script src="./assets/js/parallax.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
   <!--
     
@@ -192,7 +163,7 @@
   -->
   <script src="./assets/js/common.min.js"></script>
   <script src="./assets/js/barba_setup.js"></script>
-
+  <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>

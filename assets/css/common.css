@@ -171,7 +171,7 @@ html {
 }
 
 body {
-    font-family: 'futura_r', 'Helvetica Neue', 'Helvetica', 'Arial', 'Avenir', 'Hiragino Sans', 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-family: 'futura_r', sans-serif;
     font-size: 1.6rem;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
@@ -188,7 +188,7 @@ body {
 }
 
 textarea {
-    font-family: 'futura_r', 'Helvetica Neue', 'Helvetica', 'Arial', 'Avenir', 'Hiragino Sans', 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif
+    font-family: 'futura_r', sans-serif;
 }
 
 h1,
@@ -298,7 +298,6 @@ img {
     margin-bottom: 1.6rem;
     font-family: "futura_m";
     font-weight: normal;
-    text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5)
 }
 
 @media screen and (max-width:800px) {
@@ -311,14 +310,12 @@ img {
     .title__text {
         font-size: 3.8rem;
         margin-bottom: 0.8rem;
-        text-shadow: 0 3px 10px rgba(2, 11, 22, 0.5)
     }
 }
 
 @media screen and (max-width:420px) {
     .title__text--top {
         font-size: 5.4rem;
-        text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5);
         margin-bottom: 0.1rem
     }
 }
@@ -339,7 +336,7 @@ img {
     width: 88px;
     height: 4px;
     border-radius: 5px;
-    background: #ff4d5a
+    background: #FE8454
 }
 
 .title .border span:first-child {
@@ -461,7 +458,7 @@ img {
     display: inline-block;
     font-size: 1.8rem;
     color: #fff;
-    background: #ff4d5a;
+    background: #FE8454;
     line-height: 1;
     font-weight: bold;
     padding: 18px 32px;
@@ -591,10 +588,20 @@ img {
     padding-top: 0
 }
 
+.coming-soon {
+    font-size: 7rem;
+    color: #072142;
+    letter-spacing: 0.2em;
+    font-family: "futura_m";
+    margin-top: 20vh;
+    margin-bottom: 40vh;
+}
+
 @media screen and (max-width:420px) {
     .heading--left {
         margin-left: auto
     }
+
 }
 
 @media screen and (max-width:800px) {
@@ -602,18 +609,26 @@ img {
         padding-top: 0;
         margin-right: 0
     }
+
+    .coming-soon {
+        font-size: 4rem;
+    }
 }
 
 @media screen and (max-width:420px) {
     .heading {
-        font-size: 2.4rem;
+
         padding-top: 0.2rem
+    }
+
+    .coming-soon {
+        font-size: 2.4rem;
     }
 }
 
 .heading-num {
     font-size: 4rem;
-    color: #ff4d5a;
+    color: #FE8454;
     position: relative;
     padding-left: 6.2rem;
     padding-right: 3.2rem;
@@ -782,7 +797,7 @@ img {
 }
 
 .page-top .image__reile {
-    background: url(../img/reile.jpg) no-repeat center;
+    background: url(../img/superhighway.png) no-repeat center;
     background-size: cover
 }
 
@@ -1057,10 +1072,10 @@ header .menuIcon.js-menuOpen:before {
 }
 
 header .global-nav {
-    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(42%, #8c2b7a), to(#ff4d5a));
-    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 42%, #ff4d5a);
-    background-image: -o-linear-gradient(left, #072142, #8c2b7a 42%, #ff4d5a);
-    background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
+    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(42%, #8c2b7a), to(#FE8454));
+    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 42%, #FE8454);
+    background-image: -o-linear-gradient(left, #072142, #8c2b7a 42%, #FE8454);
+    background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #FE8454);
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -1206,11 +1221,9 @@ header .global-nav__sns a:last-child {
     height: 100vh;
     top: 0;
     left: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#072142), color-stop(#061c37), color-stop(#07182b), color-stop(#061220), to(#020b16));
-    background-image: -webkit-linear-gradient(top, #072142, #061c37, #07182b, #061220, #020b16);
-    background-image: -o-linear-gradient(top, #072142, #061c37, #07182b, #061220, #020b16);
-    background-image: linear-gradient(to bottom, #072142, #061c37, #07182b, #061220, #020b16);
-    z-index: -200
+    background-color: #061c37;
+    z-index: -200;
+    transition: all 1s ease-in-out;
 }
 
 .fullpage__slide {
@@ -1355,20 +1368,14 @@ header .global-nav__sns a:last-child {
 
 .moon {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 29.427%;
+    top: 0%;
+    bottom: 0%;
+    left: 35%;
     margin: auto;
-    height: 1385px;
-    width: 1385px;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    height: 100vh;
+    width: 65vw;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center
 }
 
@@ -1390,49 +1397,6 @@ header .global-nav__sns a:last-child {
         -webkit-transform: translate3d(-50%, 0, 0);
         transform: translate3d(-50%, 0, 0)
     }
-}
-
-.moon__back {
-    z-index: -100
-}
-
-.moon__front {
-    z-index: 200
-}
-
-.moon__text {
-    font-size: 6.4rem;
-    letter-spacing: 0.1em;
-    text-shadow: 0 10px 15px rgba(2, 11, 22, 0.2);
-    color: #ff4d5a;
-    font-family: "futura_b"
-}
-
-@media screen and (max-width:800px) {
-    .moon__text {
-        font-size: 3.2rem
-    }
-}
-
-@media screen and (max-width:420px) {
-    .moon__text {
-        font-size: 2.4rem;
-        text-shadow: 0 4px 6px rgba(2, 11, 22, 0.2)
-    }
-}
-
-.moon__text-wrap {
-    position: absolute;
-    left: -15.5963%;
-    top: 50%;
-    -webkit-transform: translate3d(0, -50%, 0);
-    transform: translate3d(0, -50%, 0)
-}
-
-.moon__img {
-    position: relative;
-    width: 39.350180505%;
-    height: 39.350180505%
 }
 
 .cloud {
@@ -1507,7 +1471,7 @@ header .global-nav__sns a:last-child {
     height: 100%;
     top: 0;
     right: 0;
-    background: #ff4d5a;
+    background: #FE8454;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0)
 }
@@ -1517,7 +1481,7 @@ header .global-nav__sns a:last-child {
 }
 
 .image--works {
-    background: url(../img/reile.jpg) no-repeat center;
+    background: url(../img/superhighway.png) no-repeat center;
     background-size: cover
 }
 
@@ -1563,111 +1527,6 @@ header .global-nav__sns a:last-child {
 @media screen and (max-width:420px) {
     .image .page-num p {
         text-shadow: 0 3px 10px rgba(2, 11, 22, 0.5)
-    }
-}
-
-.moonlight {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 29.427%;
-    margin: auto;
-    height: 1385px;
-    width: 1385px;
-    z-index: -100
-}
-
-@media screen and (max-width:800px) {
-    .moonlight {
-        width: 100vw;
-        height: 100vw;
-        left: 23%
-    }
-}
-
-@media screen and (max-width:420px) {
-    .moonlight {
-        width: 165vw;
-        height: 165vw;
-        left: 50%;
-        top: -10rem;
-        bottom: auto;
-        -webkit-transform: translate3d(-50%, 0, 0);
-        transform: translate3d(-50%, 0, 0)
-    }
-}
-
-.moonlight__wrap {
-    width: 100%;
-    height: 100%
-}
-
-.moonlight__img {
-    background: url(../img/moonlight.svg) no-repeat;
-    background-size: 100%
-}
-
-.moon-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -100
-}
-
-@media screen and (max-width:420px) {
-    .moon-background {
-        height: 100%;
-        bottom: 0;
-        margin: auto;
-        max-height: 667px
-    }
-}
-
-.star {
-    width: 1300px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 29.427%;
-    z-index: -100
-}
-
-@media screen and (max-width:800px) {
-    .star {
-        width: 100vw;
-        left: 23%
-    }
-}
-
-@media screen and (max-width:420px) {
-    .star {
-        left: 0
-    }
-}
-
-.star__img {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center
-}
-
-@media screen and (max-width:420px) {
-    .star__img {
-        display: block
-    }
-}
-
-@media screen and (max-width:420px) {
-    .star__img img {
-        -webkit-transform: translate3d(0%, 39%, 0) scale(1.5);
-        transform: translate3d(0%, 39%, 0) scale(1.5)
     }
 }
 
@@ -2148,7 +2007,7 @@ header .global-nav__sns a:last-child {
 }
 
 .skill-set__high {
-    color: #ff4d5a
+    color: #FE8454
 }
 
 .skill-set__bar {
@@ -2178,10 +2037,10 @@ header .global-nav__sns a:last-child {
 }
 
 .skill-set__bar.p90:after {
-    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(42%, #8c2b7a), to(#ff4d5a));
-    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 42%, #ff4d5a);
-    background-image: -o-linear-gradient(left, #072142, #8c2b7a 42%, #ff4d5a);
-    background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a)
+    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(42%, #8c2b7a), to(#FE8454));
+    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 42%, #FE8454);
+    background-image: -o-linear-gradient(left, #072142, #8c2b7a 42%, #FE8454);
+    background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #FE8454)
 }
 
 .skill-set__bar.p90.in:after {
@@ -2190,10 +2049,10 @@ header .global-nav__sns a:last-child {
 }
 
 .skill-set__bar.p80:after {
-    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(50%, #8c2b7a), to(#ff4d5a));
-    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 50%, #ff4d5a);
-    background-image: -o-linear-gradient(left, #072142, #8c2b7a 50%, #ff4d5a);
-    background-image: linear-gradient(to right, #072142, #8c2b7a 50%, #ff4d5a)
+    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(50%, #8c2b7a), to(#FE8454));
+    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 50%, #FE8454);
+    background-image: -o-linear-gradient(left, #072142, #8c2b7a 50%, #FE8454);
+    background-image: linear-gradient(to right, #072142, #8c2b7a 50%, #FE8454)
 }
 
 .skill-set__bar.p80.in:after {
@@ -2202,10 +2061,10 @@ header .global-nav__sns a:last-child {
 }
 
 .skill-set__bar.p70:after {
-    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(65%, #8c2b7a), to(#ff4d5a));
-    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 65%, #ff4d5a);
-    background-image: -o-linear-gradient(left, #072142, #8c2b7a 65%, #ff4d5a);
-    background-image: linear-gradient(to right, #072142, #8c2b7a 65%, #ff4d5a)
+    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(65%, #8c2b7a), to(#FE8454));
+    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 65%, #FE8454);
+    background-image: -o-linear-gradient(left, #072142, #8c2b7a 65%, #FE8454);
+    background-image: linear-gradient(to right, #072142, #8c2b7a 65%, #FE8454)
 }
 
 .skill-set__bar.p70.in:after {
@@ -2214,10 +2073,10 @@ header .global-nav__sns a:last-child {
 }
 
 .skill-set__bar.p60:after {
-    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(75%, #8c2b7a), to(#ff4d5a));
-    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 75%, #ff4d5a);
-    background-image: -o-linear-gradient(left, #072142, #8c2b7a 75%, #ff4d5a);
-    background-image: linear-gradient(to right, #072142, #8c2b7a 75%, #ff4d5a)
+    background-image: -webkit-gradient(linear, left top, right top, from(#072142), color-stop(75%, #8c2b7a), to(#FE8454));
+    background-image: -webkit-linear-gradient(left, #072142, #8c2b7a 75%, #FE8454);
+    background-image: -o-linear-gradient(left, #072142, #8c2b7a 75%, #FE8454);
+    background-image: linear-gradient(to right, #072142, #8c2b7a 75%, #FE8454)
 }
 
 .skill-set__bar.p60.in:after {
@@ -2253,9 +2112,9 @@ header .global-nav__sns a:last-child {
     width: 100%;
     padding: 14.4rem 0;
     text-align: center;
-    background-image: -webkit-linear-gradient(349deg, #072142, #8c2b7a 52%, #ff4d5a);
-    background-image: -o-linear-gradient(349deg, #072142, #8c2b7a 52%, #ff4d5a);
-    background-image: linear-gradient(101deg, #072142, #8c2b7a 52%, #ff4d5a);
+    background-image: -webkit-linear-gradient(349deg, #072142, #8c2b7a 52%, #FE8454);
+    background-image: -o-linear-gradient(349deg, #072142, #8c2b7a 52%, #FE8454);
+    background-image: linear-gradient(101deg, #072142, #8c2b7a 52%, #FE8454);
     position: relative;
     z-index: 100
 }

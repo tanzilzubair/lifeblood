@@ -8,9 +8,6 @@ function setupScrollingAndScrollAnimations() {
         navigationPosition: "left",
         animateAnchor: false,
         onLeave: function (index, nextIndex, direction) {
-            /// This handles animating in and out the moon and clouds on scroll
-            handleMoonClouds(index, nextIndex);
-
             /// This handles animating the vertical SCROLLDOWN indicator
             handleScrollDownIndicator(index, nextIndex);
 
@@ -20,6 +17,23 @@ function setupScrollingAndScrollAnimations() {
                 setupCardAnimations(nextIndex);
             }
 
+            element = document.getElementById('sky-color');
+            if (nextIndex == 1) {
+                element.style.backgroundColor = '#061c37'
+                console.log("Cyber Reality")
+            } else if (nextIndex == 2) {
+                element.style.backgroundColor = '#5B0034'
+                console.log("The Information SuperHighway")
+            } else if (nextIndex == 3) {
+                element.style.backgroundColor = '#1E232F'
+                console.log("A Ghost In The Shell")
+            } else if (nextIndex == 4) {
+                element.style.backgroundColor = 'blue'
+                console.log("Lifeblood")
+            } else {
+                element.style.backgroundColor = '#061c37'
+                console.log("Get in Touch")
+            }
         },
         afterRender: function () {
             /// Adding the fp classes that are later used for targetting
@@ -27,31 +41,6 @@ function setupScrollingAndScrollAnimations() {
                 var num = i + 1;
                 $(this).addClass("fp-section-" + num)
             });
-        }
-    });
-}
-
-function handleMoonClouds(index, nextIndex) {
-    if (1 == index) anime({
-        targets: ".js-moon",
-        translateX: [0, "100%"],
-        translateZ: 0,
-        opacity: [1, 0],
-        easing: "easeOutCubic",
-        duration: 800,
-        delay: function (el, i) {
-            return 50 * i
-        }
-    });
-    if (1 == nextIndex) anime({
-        targets: ".js-moon",
-        translateX: ["100%", 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: "easeOutCubic",
-        duration: 800,
-        delay: function (el, i) {
-            return 500 + 50 * i
         }
     });
 }

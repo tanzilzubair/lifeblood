@@ -1,10 +1,5 @@
 var state = 0;
 Barba.Dispatcher.on("newPageReady", function () {
-    if ($("#js-fullpage").length) {
-        new Parallax($(".js-parallax-moon").get(0));
-        new Parallax($(".js-parallax-moonlight").get(0));
-        new Parallax($(".js-parallax-star").get(0));
-    }
     isSp && $(".page-top").height($(window).height())
 });
 
