@@ -1,3 +1,4 @@
+import { LoadingTransition, cardToArticleTransition, articleToCardTransition } from "./barba_setup.js";
 
 function setupMenu() {
     /// Configuring the menu
@@ -19,7 +20,7 @@ function setupMenu() {
         $(".global-nav").removeClass("js-open");
 
         /// Scrolls to contact
-        $.fn.fullpage.moveTo("home");
+        $("#js-fullpage").fullpage.moveTo("home");
 
         /// I don't really know if this is required
         // Barba.Pjax.getTransition = function () {
@@ -37,7 +38,7 @@ function setupMenu() {
         $(".global-nav").removeClass("js-open");
 
         /// Scrolls to contact
-        $.fn.fullpage.moveTo("contact");
+        $("#js-fullpage").fullpage.moveTo("contact");
 
         /// I don't really know if this is required
         // Barba.Pjax.getTransition = function () {
@@ -46,3 +47,5 @@ function setupMenu() {
         // }
     });
 }
+
+export { setupMenu };

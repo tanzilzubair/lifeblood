@@ -1,3 +1,6 @@
+import { initializeIntro } from "./spline.js";
+import { state } from "./barba_setup.js";
+
 /// Handles custom scrolling logic and setting up animations that trigger on scroll
 function setupScrollingAndScrollAnimations() {
     $("#js-fullpage").fullpage({
@@ -5,7 +8,7 @@ function setupScrollingAndScrollAnimations() {
         scrollingSpeed: 1e3,
         anchors: ["home", "I", "II", "III", "contact"],
         navigation: true,
-        navigationPosition: "left",
+        navigationPosition: "right",
         animateAnchor: false,
         onLeave: function (index, nextIndex, direction) {
             /// This handles animating the vertical SCROLLDOWN indicator
@@ -17,20 +20,25 @@ function setupScrollingAndScrollAnimations() {
                 setupCardAnimations(nextIndex);
             }
 
-            element = document.getElementById('sky-color');
+            var element = document.getElementById('sky-color');
             if (nextIndex == 1) {
+                /// Cyber Reality
                 element.style.backgroundColor = '#061c37'
-                console.log("Cyber Reality")
+                initializeIntro();
             } else if (nextIndex == 2) {
+                /// Information Super Highway
                 element.style.backgroundColor = '#5B0034'
                 console.log("The Information SuperHighway")
             } else if (nextIndex == 3) {
+                /// Ghost In The Shell
                 element.style.backgroundColor = '#1E232F'
                 console.log("A Ghost In The Shell")
             } else if (nextIndex == 4) {
+                /// Lifeblood
                 element.style.backgroundColor = 'blue'
                 console.log("Lifeblood")
             } else {
+                /// Get In Touch
                 element.style.backgroundColor = '#061c37'
                 console.log("Get in Touch")
             }
@@ -103,3 +111,5 @@ function setupCardAnimations(nextIndex) {
         offset: "-=1500"
     });
 }
+
+export { setupScrollingAndScrollAnimations };

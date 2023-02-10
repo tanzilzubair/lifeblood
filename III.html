@@ -1,49 +1,90 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 
 <head>
+    <title>Lifeblood</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="KUON YAGI PORTFOLIO / Web designer / Markup engineer">
-    <meta property="og:image" content="https://kuon.space/assets/img/ogp.png">
+    <meta property="og:description" content="Lifeblood, an artistic exploration of technology">
+    <!-- <meta property="og:image" content="[[INSERT LINK]]"> -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@goldi69s">
-    <meta property="og:site_name" content="KUON YAGI PORTFOLIO">
-    <meta property="og:locale" content="ja_JP">
-    <link rel="stylesheet" href="assets/css/jquery.fullPage.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <meta name="twitter:site" content="@tanzil7274">
+    <meta property="og:site_name" content="Lifeblood">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="lifeblood.tanzilzubair.tech/III.html">
+    <meta property="og:title" content="Lifeblood">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/css/jquery.fullPage.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <meta property="og:url" content="https://kuon.space/lifeblood.html">
-    <meta property="og:title" content="Hair Space lifeblood | KUON YAGI PORTFOLIO">
-    <title>Hair Space lifeblood | KUON YAGI PORTFOLIO</title>
+    <!-- Icons -->
+    <style>
+        @font-face {
+            font-family: Font Awesome\ 5 Brands;
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://use.fontawesome.com/releases/v5.0.6/webfonts/fa-brands-400.eot);
+            src: url(https://use.fontawesome.com/releases/v5.0.6/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"), url(https://use.fontawesome.com/releases/v5.0.6/webfonts/fa-brands-400.woff2) format("woff2"), url(https://use.fontawesome.com/releases/v5.0.6/webfonts/fa-brands-400.woff) format("woff"), url(https://use.fontawesome.com/releases/v5.0.6/webfonts/fa-brands-400.ttf) format("truetype"), url(https://use.fontawesome.com/releases/v5.0.6/webfonts/fa-brands-400.svg#fontawesome) format("svg")
+        }
+
+        .fab {
+            font-family: Font Awesome\ 5 Brands;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1
+        }
+
+        .fa-github:before {
+            content: "\f09b"
+        }
+
+        .fa-github-alt:before {
+            content: "\f113"
+        }
+
+        .fa-github-square:before {
+            content: "\f092"
+        }
+
+        .fa-instagram:before {
+            content: "\f16d"
+        }
+    </style>
+
+    <!-- 3D Stuff Preloading -->
+    <link rel="preload" href="./assets/models/intro.splinecode" as="fetch">
+    <script type="module" src="./assets/js/spline.js"></script>
+
+    <!-- Miscellaenous -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 
 <body>
-    <header><a class="name" href="./">Kuon Yagi</a>
+    <header><a class="name" href="./">Lifeblood</a>
         <div class="wrap">
-            <div class="icons"><a href="https://www.instagram.com/kuon_y/" target="_blank"><i
-                        class="fab fa-instagram"></i></a><a href="https://twitter.com/Goldi69s" target="_blank"><i
-                        class="fab fa-twitter"></i></a><a href="https://dribbble.com/kuon_yagi" target="_blank"><i
-                        class="fab fa-dribbble"></i></a><a href="https://www.wantedly.com/users/48483598"
-                    target="_blank">Wantedly</a></div>
+            <div class="icons"><a href="https://github.com/tanzilzubair" target="_blank"><i
+                        class="fab fa-github"></i></a><a href="https://www.instagram.com/tanzil.zubair/"
+                    target="_blank"><i class="fab fa-instagram"></i></a></div>
             <div class="menuIcon js-menuBtn"></div>
         </div>
         <nav class="global-nav">
             <ul class="global-nav__list">
                 <li><a class="js-home" href="./#home">HOME</a></li>
-                <li><a href="./I.html">WORKS</a></li>
-                <li><a href="./II.html">ABOUT ME</a></li>
-                <li><a href="./III.html">LIFEBLOOD</a></li>
+                <li><a href="./I.html">I</a></li>
+                <li><a href="./II.html">II</a></li>
+                <li><a href="./III.html">III</a></li>
                 <li><a class="js-contact" href="./#contact">CONTACT</a></li>
-                <li class="global-nav__sns"><a href="https://www.instagram.com/kuon_y/" target="_blank"><i
-                            class="fab fa-instagram"></i></a><a href="https://twitter.com/Goldi69s" target="_blank"><i
-                            class="fab fa-twitter"></i></a><a href="https://dribbble.com/kuon_yagi" target="_blank"><i
-                            class="fab fa-dribbble"></i></a></li>
+                <li class="global-nav__sns"><a href="https://github.com/tanzilzubair" target="_blank"><i
+                            class="fab fa-github"></i></a><a href="https://www.instagram.com/tanzil.zubair/"
+                        target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </nav>
         <div class="curtain"></div>
@@ -74,18 +115,20 @@
             </div>
         </div>
     </main>
-    <script src="./assets/js/setup_menu.js"></script>
-    <script src="./assets/js/full_page_scrolling.js"></script>
+
+    <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/js/jquery.fullPage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/1.0.0/barba.min.js"></script>
-    <!--
-    
-    <script src="./assets/js/main.js"></script>
-  -->
-    <script src="./assets/js/common.min.js"></script>
-    <script src="./assets/js/barba_setup.js"></script>
+
+
+    <!-- JS Scripts -->
+    <script type="module" src="./assets/js/main.js"></script>
+    <script src="./assets/js/jquery.fullPage.js"></script>
+    <script type="module" src="./assets/js/full_page_scrolling.js"></script>
+    <script type="module" src="./assets/js/setup_menu.js"></script>
+    <script type="module" src="./assets/js/common.min.js"></script>
+    <script type="module" src="./assets/js/barba_setup.js"></script>
 </body>
 
 </html>
