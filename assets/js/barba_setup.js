@@ -105,10 +105,6 @@ var cardToArticleTransition = Barba.BaseTransition.extend({
                 marginLeft: [image.marginLeft, imageBig.marginLeft],
                 top: [image.top, imageBig.top]
             }).add({
-                targets: ".fullpage__slide",
-                background: ["rgba(0,0,0,0)", "#020b16"],
-                offset: "-=500"
-            }).add({
                 targets: ".page-num p",
                 translateY: [0, "100%"],
                 translateZ: 0,
@@ -258,7 +254,7 @@ var articleView = Barba.BaseView.extend({
             translateX: ["100%", 0],
             offset: "-=500"
         }).add({
-            targets: ".scrollDown",
+            targets: ".scroll-indicator",
             translateY: ["180%", 0],
             offset: "-=500"
         })
@@ -279,6 +275,15 @@ var articleView = Barba.BaseView.extend({
     },
     onLeaveCompleted: function () {
         setupScrollingAndScrollAnimations(), state = 0;
+        var array = [];
+        if (window.location.href.includes("#III")) {
+            array = ["#1D0C37", "#1D0C37"];
+        } else if (window.location.href.includes("#II")) {
+            array = ["#1E232F", "#1E232F"];
+        } else if (window.location.href.includes("#I")) {
+            array = ["#5B0034", "#5B0034"];
+        }
+
         anime.timeline({
             duration: 500,
             easing: "easeInOutCubic"
@@ -293,14 +298,14 @@ var articleView = Barba.BaseView.extend({
             translateZ: 0,
             offset: "-=500"
         }).add({
-            targets: ".fullpage__slide",
-            background: ["#020b16", "rgba(0,0,0,0)"],
-            offset: "-=500"
-        }).add({
             targets: ".active .btn-wrap",
             translateY: ["110%", 0],
             translateZ: 0,
             offset: "-=500"
+        }).add({
+            targets: ".fullpage__slide",
+            background: array,
+            offset: "-=500",
         })
     }
 });

@@ -21,27 +21,32 @@ function setupScrollingAndScrollAnimations() {
             }
 
             var element = document.getElementById('sky-color');
+
+            if (index == 0) {
+                initializeIntro();
+            }
+
             if (nextIndex == 1) {
                 /// Cyber Reality
                 element.style.backgroundColor = '#061c37'
-                initializeIntro();
             } else if (nextIndex == 2) {
                 /// Information Super Highway
                 element.style.backgroundColor = '#5B0034'
-                console.log("The Information SuperHighway")
             } else if (nextIndex == 3) {
                 /// Ghost In The Shell
                 element.style.backgroundColor = '#1E232F'
-                console.log("A Ghost In The Shell")
             } else if (nextIndex == 4) {
                 /// Lifeblood
-                element.style.backgroundColor = '#061c37'
-                console.log("Lifeblood")
+                element.style.backgroundColor = '#1D0C37'
             } else {
                 /// Get In Touch
-                element.style.backgroundColor = '#061c37'
-                console.log("Get in Touch")
+                element.style.backgroundColor = '#FA02FD'
+
             }
+            $('.fullpage__slide').each(function (i, element) {
+                element.style.background = 'transparent';
+            });
+
         },
         afterRender: function () {
             /// Adding the fp classes that are later used for targetting

@@ -505,7 +505,7 @@ img {
     }
 }
 
-.scrollDown {
+.scroll-indicator {
     position: fixed;
     font-size: 1.4rem;
     bottom: 80px;
@@ -519,7 +519,7 @@ img {
     z-index: 100
 }
 
-.scrollDown:after {
+.scroll-indicator:after {
     content: "";
     width: 2px;
     height: 64px;
@@ -532,14 +532,14 @@ img {
 }
 
 @media screen and (max-width:420px) {
-    .scrollDown:after {
+    .scroll-indicator:after {
         height: 32px;
         bottom: -40px
     }
 }
 
 @media screen and (max-width:420px) {
-    .scrollDown {
+    .scroll-indicator {
         left: auto;
         right: 6.25%;
         font-size: 1rem;
@@ -751,7 +751,6 @@ img {
     height: 100vh;
     position: relative;
     color: #fff;
-    background: #020b16
 }
 
 @media screen and (max-width:420px) {
@@ -794,16 +793,6 @@ img {
         height: 65.492%;
         top: auto
     }
-}
-
-.page-top .image__reile {
-    background: url(../img/superhighway.png) no-repeat center;
-    background-size: cover
-}
-
-.page-top .image__about {
-    background: url(../img/ghost.png) no-repeat center;
-    background-size: cover
 }
 
 .text {
@@ -1236,7 +1225,6 @@ header .global-nav__sns a:last-child {
     -ms-flex-align: center;
     align-items: center;
     position: relative;
-    color: #fff
 }
 
 @media screen and (max-width:420px) {
@@ -1480,18 +1468,23 @@ header .global-nav__sns a:last-child {
     background: #072142
 }
 
-.image--works {
+.image--superhighway {
     background: url(../img/superhighway.png) no-repeat center;
     background-size: cover
 }
 
-.image--about {
+.image--ghost {
     background: url(../img/ghost.png) no-repeat center;
     background-size: cover
 }
 
+.image--reality {
+    background: url(../img/reality.png) no-repeat center;
+    background-size: cover
+}
+
 .image--contact {
-    background: url(../img/contact.jpg) no-repeat center;
+    background: url(../img/contact.jpeg) no-repeat center;
     background-size: cover
 }
 
