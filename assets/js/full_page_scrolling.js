@@ -35,7 +35,7 @@ function setupScrollingAndScrollAnimations() {
                 console.log("A Ghost In The Shell")
             } else if (nextIndex == 4) {
                 /// Lifeblood
-                element.style.backgroundColor = 'blue'
+                element.style.backgroundColor = '#061c37'
                 console.log("Lifeblood")
             } else {
                 /// Get In Touch
